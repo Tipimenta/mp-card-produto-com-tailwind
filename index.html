@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="tailwind.css" />
+  <title>tailwind mini projeto card</title>
+ </head>
+ <body class="flex min-h-screen items-center justify-center">
+  <div id="card" class="max-w-sm rounded-xl shadow-lg overflow-hidden">
+   <img src="./tennis.png" alt="imagem do produto" />
+   <div id="content" class="space-y-6 p-8">
+    <h1 class="text-3xl font-bold">Nike Air Max 90</h1>
+    <p class="text-sm">
+     Eleve seu estilo com o clássico reiventado. Conforto supremo encontra
+     design inovador
+    </p>
+    <div id="rating" class="flex gap-2 items-center">
+     <div id="star-container" class="flex gap-2">
+     </div>
+     
+     <span class="text-sm text-gray-500">4.8 (42 Avaliações)</span>
+    </div>
+    <div id="price" class="flex justify-between">
+     <span class="text-3xl font-bold text-sky-500">R$899,00</span>
+     <button
+      class="text-white text-sm rounded-full py-2 px-4 bg-linear-90 from-sky-600 to-indigo-900/47 cursor-pointer"
+     >
+      Comprar agora
+     </button> 
+    </div>
+    <div class="flex gap-4 items-center">
+     <img class="size-4" src="./caminhao.svg" alt="icone de caminhão" />
+     <p class="text-gray-500 text-xs">Frete grátris para todo o Brasil</p>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+
+<script>
+ const starContainerEl = document.getElementById("star-container");
+
+ starContainerEl.innerHTML = 
+ `<img class="size-5" src="star.svg"/>`.repeat(4) + `<img class="size-4" src="half-star.svg"/>`;
+</script>
